@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kulit;
 use App\Models\Riwayat;
 use Illuminate\Http\Request;
 

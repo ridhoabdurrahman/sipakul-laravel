@@ -16,7 +16,7 @@ class CreateGejalaSeeder extends Seeder
     {
         $data = [
             [
-                'nama' => 'Kelembapap dan kekenyalan kulit wajah cukup',
+                'nama' => 'Kelembapapan dan kekenyalan kulit wajah cukup',
                 'kode' => 'G001'
             ],
             [

@@ -13,7 +13,7 @@
         <table class="table table-hover border">
             <thead>
                 <th>Kode</th>
-                <th>Nama kulit</th>
+                <th>Nama Kulit</th>
                 <th>Pengobatan</th>
                 <th></th>
             </thead>
@@ -21,7 +21,7 @@
                 @forelse($kulit as $row)
                     <tr>
                         <td><b>{{ $row->kode }}</b></td>
-                        <td>{{ $row->nama }}</td>
+                        <td style="width: 12%">{{ $row->nama }}</td>
                         <td>{{ \Str::limit($row->pengobatan, 180) }}</td>
                         <td>
                             <div class="d-flex justify-between-space">

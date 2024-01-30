@@ -73,6 +73,33 @@
                     <b>{{ unserialize($riwayat->cf_max)[1] }}</b>
                 </p>
             </div>
+            <div class="alert alert-primary mt-3">
+                <h5 class="font-weight-bold">Perawatan</h5>
+                <p>
+
+                    @php
+                        $string = unserialize($riwayat->cf_max)[1];
+
+                        // Find the position of "Normal ("
+                        $position = strpos($string, '(');
+
+                        // If "Normal (" is found, extract the substring from that position
+                        if ($position !== false) {
+                            $substring = substr($string, $position);
+
+                            // Remove the closing parenthesis and any extra characters
+                            $substring = ltrim($substring, '(');
+                            $substring = rtrim($substring, ')');
+                        } else {
+                            echo 'Data not found';
+                        }
+                        $query = DB::select("SELECT pengobatan FROM kulits WHERE kode='$substring'");
+
+                        echo $query[0]->pengobatan;
+
+                    @endphp
+                </p>
+            </div>
             <div class="mt-3 text-center">
                 <a href="{{ asset("storage/downloads/$riwayat->file_pdf") }}" target="_blank"
                     class="btn btn-primary mr-1"><i class="fas fa-print mr-1"></i> Print</a>
