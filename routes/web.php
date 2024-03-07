@@ -8,10 +8,11 @@ use App\Http\Controllers\{
 	kulitController,
 	GejalaController,
 	RuleController,
-	UserController
+	UserController,
+	LandingPageController
 };
 
-Route::redirect('/', '/login');
+Route::get('/', [LandingPageController::class, 'index']);
 
 Route::group([
 	'middleware' => 'auth',
