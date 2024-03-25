@@ -12,7 +12,7 @@ use App\Http\Controllers\{
 	LandingPageController
 };
 
-Route::get('/', [LandingPageController::class, 'index']);
+Route::redirect('/', '/login');
 
 Route::group([
 	'middleware' => 'auth',

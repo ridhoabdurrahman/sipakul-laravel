@@ -121,7 +121,8 @@
                                 magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum</p>
                             <div class="d-flex align-items-center justify-content-center">
                                 <a class="btn btn-primary btn-primary-outline-0 rounded-pill py-3 px-5"
-                                    href="#">Mulai Sekarang</a>
+                                    href="{{ route('login') }}">
+                                    Mulai Sekarang</a>
                             </div>
                         </div>
                     </div>
